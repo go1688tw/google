@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="zn-tw">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+	  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    
+    <!-- <script src="js/bootstrap-3.1.1.min.js" ></script> -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <link rel="icon" href="images/logo.ico" type="image/x-icon" />
+    <title>好吃早午餐點餐系統</title>
+  </head>
+  <body>
+    
+         
+    <!-- <h3 class="text-center mt-5" style="font-family: 微軟正黑體;">好吃早午餐點餐系統</h3> -->
+    <div class="logo-nav-left1">
+  <nav class="navbar navbar-default">  
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse"
+        data-target="#myNavbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul id="menu" class="nav navbar-nav">
+        <li> <a>好吃早午餐點餐系統</a></li>
+        <li> <a href="index.html">首頁</a></li>
+        <li> <a href="layout.html">環境座位</a></li>
+        <li> <a href="map.html">店址地圖</a></li>
+        <li> <a href="contact.html">聯絡我們</a></li>
+      </ul>
+    </div>
+  </nav>
+    </div>
+    <!-- 跑馬燈 -->
+    <div class="container-fluid shadow p-3 mb-5 bg-white rounded" style="background-color: rgba(230, 230, 230, 0.2);"> 
+      <div class="col-sm-8 col-md-8 col-lg-12">
+        <div class="header-bottom-right offers">
+            <div class="marquee"><span style="color: black;"><i class="fa fa-circle" aria-hidden="true"></i>開學季特價優惠</span>
+                <span style="color: black;"><i class="fa fa-circle" aria-hidden="true"></i>1號餐90 打9折</span>
+                <span style="color: black;"><i class="fa fa-circle" aria-hidden="true"></i>2號餐 買2送1</span>
+                <span style="color: black;" ><i class="fa fa-circle" aria-hidden="true"></i>網上訂餐95折</span>
+                <span style="color: black;"><i class="fa fa-circle" aria-hidden="true"></i>來電案讚送雞塊1份</span>
+                <span style="color: black;"><i class="fa fa-circle" aria-hidden="true"></i>分享即送1份薯條</span>
+                <span style="color: black;" ><i class="fa fa-circle" aria-hidden="true"></i>網上訂餐95折</span>
+                <span style="color: black;"><i class="fa fa-circle" aria-hidden="true"></i>來電案讚送雞塊1份</span>
+                <span style="color: black;"><i class="fa fa-circle" aria-hidden="true"></i>分享及送1份大薯</span>
+                <span style="color: black;"><i class="fa fa-circle" aria-hidden="true"></i>1號餐90 打9折</span>
+                <span style="color: black;"><i class="fa fa-circle" aria-hidden="true"></i>2號餐 買2送1</span>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+      <!-- 表單返回頁，記得在表單加「 target='returnWin' 」 -->
+    <iframe name="returnWin" style="display: none;" onload="this.onload=function(){window.location='ok.html'}"></iframe>
+    <div class="container clearfix">  
+        <form target='returnWin' role="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeCLhECzmGMvYs4Dk-4eeIYPy7DWSvBy2foaiQicTZ8RMWI7A/formResponse"
+        method="post" id="myForm" >
+          <h3 style="font-family: 微軟正黑體;background-color:rgba(180,0,0,.1);">套餐</h3>
+            <div class="row">
+              <!--雞腿飯-90元-->              
+              <div class="col-sm-3">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/5.png">
+                  <label><span class="title">一號餐-90元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.6657435" id="6657435" value="" min=0 onchange="calTotal()">
+                </div>
+              </div>          
+              <!--雞排飯-80元-->              
+              <div class="col-sm-3">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/6.png">
+                  <label><span class="title">二號餐-80元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.964585982" id="964585982" value="" min=0 onchange="calTotal()">
+                </div>
+              </div>          
+              <!--排骨飯-70元-->              
+              <div class="col-sm-3">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/7.png">
+                  <label><span class="title">三號餐-70元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.1352768142" id="1352768142" value="" min=0 onchange="calTotal()">
+                </div>
+              </div>          
+              <!--招牌飯-60元-->              
+              <div class="col-sm-3">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/8.png">
+                  <label><span class="title">四號餐-60元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.1700549583" id="1700549583" value="" min=0 onchange="calTotal()">
+                </div>
+              </div> 
+            </div>
+          <h3 style="font-family: 微軟正黑體;background-color:rgba(180,0,0,.1);">單點漢堡</h3>   
+            <div class="row">
+              <!--雞腿飯-90元-->              
+              <div class="col-sm-3">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/1.png">
+                  <label><span class="title">牛肉漢堡-45元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.141577223" id="141577223" value="" min=0 onchange="calTotal()">
+                </div>
+              </div>          
+              <!--雞排飯-80元-->              
+              <div class="col-sm-3">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/3.png">
+                  <label><span class="title">豬肉漢堡-35元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.268084101" id="268084101" value="" min=0 onchange="calTotal()">
+                </div>
+              </div>          
+              <!--排骨飯-70元-->              
+              <div class="col-sm-3">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/2.png">
+                  <label><span class="title">雞肉漢堡-35元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.664929749" id="664929749" value="" min=0 onchange="calTotal()">
+                </div>
+              </div>          
+              <!--招牌飯-60元-->              
+              <div class="col-sm-3">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/13.png">
+                  <label><span class="title">加蛋-10元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.1133700146" id="1133700146" value="" min=0 onchange="calTotal()">
+                </div>
+              </div> 
+            </div> 
+          <h3 style="font-family: 微軟正黑體;background-color:rgba(180,0,0,.1);">單點飲料</h3>  
+            <div class="row">
+              <!--雞腿飯-90元-->              
+              <div class="col-sm-4">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/9.png">
+                  <label><span class="title">奶茶-25元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.1341392872" id="1341392872" value="" min=0 onchange="calTotal()">
+                </div>
+              </div>          
+              <!--雞排飯-80元-->              
+              <div class="col-sm-4">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/12.png">
+                  <label><span class="title">咖啡-35元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.1251507870" id="1251507870" value="" min=0 onchange="calTotal()">
+                </div>
+              </div>          
+              <!--排骨飯-70元-->              
+              <div class="col-sm-4">
+                <div class="form-group" style="text-align: center;background-color:rgba(220,220,220,.1);" >
+                    <img src="images/11.png">
+                  <label><span class="title">鮮奶茶-45元</span><span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control amount" name="entry.522238573" id="522238573" value="" min=0 onchange="calTotal()">
+                </div>
+              </div>                                   
+            </div> 
+          <h3 style="font-family: 微軟正黑體;background-color:rgba(180,0,0,.1);"><b>客人資料</b></h3>  
+            <div class="row">   
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>姓名<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control required" name="entry.1714779853" id="1714779853">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>電話<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control required " name="entry.1722611102" id="1722611102">
+                </div>
+              </div>  
+                <!--桌號-->              
+              <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>取餐時間<span class="text-danger">*</span></label>
+                    <select name="entry.2004226794" id="" value="" class="form-control required " size="1">              
+                      <option value="">請選擇時間</option>
+                      <option value="06:30">06:30</option>
+                      <option value="07:30">07:30</option>
+                      <option value="08:30">08:30</option>
+                      <option value="09:30">09:30</option>
+                      <option value="10:30">10:30</option>
+                      <option value="11:30">11:30</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                    <label>合計</label>
+                    <input type="text" class="form-control" name="" id="total" value="" readonly>
+                </div>
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col-sm-12">  
+                <!-- 備註 -->
+                <div class="form-group">
+                  <label class="control-label">備註(口味.醬料)</label>
+                  <textarea class="form-control" rows="4" id="1654115049" name="entry.1654115049"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="text-center pb-3">
+              <button type="submit" class="btn btn-warning">送出</button>
+            </div>
+          </form> 
+    </div>
+    <div class="footer-bottom mt_60 ptb_10">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="payment-icon text-right">
+              <ul>
+                <li><i class="fa fa-cc-paypal "></i></li>
+                <li><i class="fa fa-cc-stripe"></i></li>
+                <li><i class="fa fa-cc-visa"></i></li>
+                <li><i class="fa fa-cc-discover"></i></li>
+                <li><i class="fa fa-cc-mastercard"></i></li>
+                <li><i class="fa fa-cc-amex"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="social_icon">
+              <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                <li><a href="#"><i class="fa fa-circle"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+              </ul>
+            </div>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div class="copyright-part">Copyright &copy; 2020.Company name All rights reserved.More Templates <a href="" target="_blank" title="">go1688tw</a> - Collect from <a href="" title="" target="_blank">go1688tw</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.js"></script>
+	<!-- <script src="js/jquery.firstVisitPopup.js"></script> -->
+  <!-- <script src="js/custom.js"></script> -->
+     <script>
+        $(function(){
+            $("#myForm").validate({
+                submitHandler: function(form) {
+                    form.submit();
+                },
+                rules: {
+                    'entry.2004226794' : {//時間
+                        required: true
+                    },
+                    'entry.1714779853' : {//姓名
+                        required: true
+                    },
+                    'entry.1722611102' : {//電話
+                        required: true
+                    },
+                    'entry.6657435' : {//一號餐
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.964585982' : {//二號餐
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.1352768142' : {//三號餐
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.1700549583' : {//四號餐
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.141577223' : {//牛
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.268084101' : {//豬
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.664929749' : {//雞
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.1133700146' : {//蛋
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.1341392872' : {//奶
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.1251507870' : {//咖
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.522238573' : {//鮮
+                        digits:true ,
+                        min: 0
+                    }
+                },
+                messages: {
+                    'entry.2004226794' : {//時間
+                        required: "請輸入取餐時間"
+                    },
+                    'entry.1714779853' : {//時間
+                        required: "請輸入客人稱呼"
+                    },
+                    'entry.1722611102' : {//時間
+                        required: "請輸入電話"
+                    },
+                    'entry.6657435' : {//一號餐
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    },
+                    'entry.964585982' : {//二號餐
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    },
+                    'entry.1352768142' : {//三號餐
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    },
+                    'entry.1700549583' : {//四號餐
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    },
+                    'entry.141577223' : {//牛
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    },
+                    'entry.268084101' : {//豬
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    },
+                    'entry.664929749' : {//雞
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    },
+                    'entry.1133700146' : {//蛋
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    },
+                    'entry.1341392872' : {//奶
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    },
+                    'entry.1251507870' : {//咖
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    },
+                    'entry.522238573' : {//鮮
+                        digits:"請填正整數" ,
+                        min: "不能輸入負數"
+                    }
+
+                }
+            });
+
+        });
+    </script>
+<script>
+    function calTotal(){
+      // document.getElementsByClassName("title")[0].innerText //取標題
+      // document.getElementsByClassName("amount")[0].value //取數量
+      var titles = document.getElementsByClassName("title");
+      var amounts = document.getElementsByClassName("amount");
+      var total = 0;
+      for(var i=0; i < titles.length; i++){
+          var title = document.getElementsByClassName("title")[i].innerText;
+          var amount = document.getElementsByClassName("amount")[i].value;
+          var subArr = title.split("-");
+          var price = parseInt(subArr[1]);
+          total += (amount * price);
+      }
+      if(total === 0){
+          document.getElementById("total").value = "";
+      }else{
+          document.getElementById("total").value = total;
+      }
+      
+    }
+</script>   
+  </body>
+</html>
